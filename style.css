@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg01: #181A1D;
+  --bg02: #2F3439;
+  --bg03: linear-gradient(135deg, #2C3136, #1D2023);
+  --bg04: #040404;
+  --border01: #22262A;
+  --border02: #1A1D21;
+  --color: #86898C;
+}
+
+body {
+  background: var(--bg01);
+}
+
+.wrapper {
+  width: 300px;
+  height: 330px;
+  text-align: center;
+  margin: 200px auto;
+  overflow: hidden;
+  border-radius: 60px;
+  background: #EDE8E8;
+  transition: .3s ease;
+  display: flex;
+  justify-content: center;
+  border: 9px solid #EDE8E8;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 10);
+}
+
+.wrapper:hover {
+  width: 400px;
+  height: 700px;
+  border-radius: 30px;
+  transition: .4s ease;
+  padding: 30px;
+  margin: 30px auto;
+}
+ 
+.song-timer,
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.name {
+  color: crimson;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.artist {
+  color: var(--color);
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 0 20px 0;
+}
+
+.audioC {
+  margin: 30px 0 30px 0;
+}
+
+.song-timer {
+  margin-bottom: 20px;
+}
+
+.song-timer span {
+  font-size: 10px;
+  color: var(--color);
+  font-weight: 800;
+}
+
+.progress-area {
+  height: 7px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 50px;
+  background: var(--bg04);
+  cursor: pointer;
+}
+
+.progress-area .progress-bar {
+  height: inherit;
+  width: 0;
+  position: relative;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #BF2311 0%, #E1530A 80%);
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  background: var(--bg02);
+  border-radius: 50%;
+  top: 50%;
+  right: -14px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  background: #CE0E0E;
+  border-radius: 50%;
+  top: 50%;
+  right: -5px;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+
+.controls {
+  margin: 55px 8px 55px 8px;
+}
+
+.btnC {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--border02);
+  transition: all 0.2s ease;
+  background: var(--bg03);
+}
+
+.controls .btnC {
+  font-size: 20px;
+  user-select: none;
+  color: #A7A9A7;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls .play-pause {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.play-pause ion-icon {
+  text-align: center;
+  color: #fff;
+}
+
+.play-pause {
+  border: 3px solid #CE0E0E;
+  background: linear-gradient(135deg, #BD1010, #E50B0B);
+}
