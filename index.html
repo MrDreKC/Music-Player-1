@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Music Player</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link href="style.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="player">
+      <div class="img-area">
+        <img src="https://2.bp.blogspot.com/-mNmwKeTuZZg/XR76sYkpbpI/AAAAAAAAELA/5DTQjesqBqMdMIlYwe1uOYTmdLUoBRpvACKgBGAs/w0/spaceship-minimalist-sci-fi-digital-art-uhdpaper.com-4K-138.jpg">
+      </div>
+      <div class="song-details">
+        <h1 class="name">Crimson</h1>
+        <h3 class="artist">Marcus</h3>
+      </div>
+      <div class="audioC">
+        <div class="song-timer">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
+        <div class="progress-area">
+          <div class="progress-bar">
+            <audio id="main-audio" src="#"></audio>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btnC" id="prev">
+          <ion-icon name="play-back"></ion-icon>
+        </button>
+        <button class="play-pause btnC">
+          <ion-icon name="play"></ion-icon>
+        </button>
+        <button class="btnC" id="next">
+          <ion-icon name="play-forward"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
